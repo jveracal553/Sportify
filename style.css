@@ -1,0 +1,14 @@
+.search {
+  width: 10px;
+}
+
+.soccer,
+.filter {
+  width: 10px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
