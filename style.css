@@ -1,4 +1,4 @@
-.search {
+/* .search {
   width: 10px;
 }
 
@@ -25,4 +25,238 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-content: center;
+} */
+*´ body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add a black background color to the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: rgb(222, 92, 92);
+}
+
+/* navbar container classs */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* search input style */
+.topnav input[type="text"] {
+  float: left;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  /* margin-right: 16px; */
+  margin-left: 16px;
+  font-size: 17px;
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav a,
+  .topnav input[type="text"] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type="text"] {
+    border: 1px solid #ccc;
+  }
+}
+
+.slider-holder {
+  width: 730px;
+  height: 400px;
+  /* background-color: yellow; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.image-holder {
+  width: 2400px;
+  /* background-color: red; */
+  height: 400px;
+  clear: both;
+  position: relative;
+
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s;
+}
+
+.slider-image {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+#slider-image-1:target ~ .image-holder {
+  left: 0px;
+}
+
+#slider-image-2:target ~ .image-holder {
+  left: -730px;
+}
+
+#slider-image-3:target ~ .image-holder {
+  left: -1500px;
+}
+
+.button-holder {
+  position: relative;
+  top: -20px;
+}
+
+.slider-change {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  background-color: rgb(221, 210, 210);
+}
+
+#container {
+  margin-top: 10px;
+  background-color: rgb(222, 92, 92);
+  /* height: 50px; */
+  /* border: 1px solid #000; */
+  font-size: 17px;
+}
+
+.left-column {
+  float: left;
+  width: 33%;
+  /* background-color: red; */
+  text-align: center;
+  border: 1px solid #000;
+  /* height: 50px; */
+  padding: 14px;
+}
+.right-column {
+  width: 33%;
+  /* background-color: green; */
+  text-align: center;
+  border: 1px solid #000;
+  /* height: 50px; */
+  padding: 14px;
+
+  float: right;
+}
+.center-column {
+  border: 1px solid #000;
+
+  margin: auto;
+
+  /* width: 33%; */
+  /* background-color: blue; */
+  text-align: center;
+  vertical-align: middle;
+
+  /* height: 50px; */
+  padding: 14px;
+}
+
+.w {
+  overflow: hidden;
+  text-align: center;
+  border: 2px solid rgb(222, 92, 92);
+  margin-top: 10px;
+  background-color: rgb(224, 154, 154);
+}
+.wf {
+  margin: -1%;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.wf .wff {
+  /* background: #000; */
+  float: left;
+  height: 14vw;
+  margin: 1px;
+  width: 24.8%;
+  margin-bottom: 30px;
+}
+
+.img-cancha {
+  margin-top: 25px;
+  align-items: center;
+  /* border: 2px solid rgb(222, 92, 92); */
+  border-radius: 3%;
+}
+
+/* .main-container {
+  width: 640px;
+  margin: 0 auto;
+} */
+.container {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  height: 250px;
+  /* background: #0077a3; */
+  margin: 5px;
+}
+.container ul {
+  position: relative;
+  padding: 0;
+  list-style: none;
+  transform: translateY(-50%);
+  top: 30%;
+}
+.container li {
+  text-align: center;
+  height: 25px;
+  margin: 10px;
+}
+.container span {
+  /* background-color: #00c430; */
+  padding: 5px 10px 5px 10px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.container2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  height: 250px;
+  /* background: #0077a3; */
+  margin: 5px;
+}
+.container2 ul {
+  position: relative;
+  padding: 0;
+  list-style: none;
+  transform: translateY(-50%);
+  top: 40%;
+}
+.container2 li {
+  text-align: center;
+  height: 25px;
+  margin: 10px;
+}
+.container2 span {
+  /* background-color: #00c430; */
+  padding: 5px 10px 5px 10px;
+  color: black;
+  /* text-transform: uppercase; */
+  /* font-weight: bold; */
 }
