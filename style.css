@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+:root{
+  font-family: 'Roboto', sans-serif;
+}
+
 .search {
   width: 10px;
 }
@@ -9,20 +15,130 @@
 
 nav {
   display: flex;
+  background-color: salmon;
   flex-direction: row;
   width: 100%;
+  align-items: center;
+  gap: 25px;
+  border-radius: 15px;
+}
+
+#img-campeonato{
+  position: relative;
+  width: 350px;
+  height: 300px;
+  border-radius: 7.5px;
+  left: 35%;  
+}
+
+#img-logo{
+  position: relative;
+  left: 60px;
+  width: 5rem;
+  border-radius: 5px;
+
+}
+
+#nombre{
+  position: relative;
+  left: 25px;
+  width: 5rem;
+  border-radius: 5px;
+
+}
+
+form{
+  position: relative;
+  left: 250px;
 }
 
 .tabs {
+  margin-top: 15px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
+  gap: 50px;
+  font-weight: bold;
 }
+
+#tab01:hover{
+  box-shadow: 5px 5px rgb(49, 45, 45);
+}
+#tab02:hover{
+  box-shadow: 5px 5px rgb(49, 45, 45);
+}
+#tab03:hover{
+  box-shadow: 5px 5px rgb(49, 45, 45);
+}
+
+#tab01{
+  width: 30%;
+  border-style: solid;
+  text-align: center;
+  background-color: salmon;
+  border-radius: 10px;
+}
+
+#tab02{
+  width: 30%;
+  border-style: solid;
+  text-align: center;
+  background-color: salmon;
+  border-radius: 10px;
+}
+
+#tab03{
+  width: 30%;
+  border-style: solid;
+  text-align: center;
+  background-color: salmon;
+  border-radius: 10px;
+}
+
 
 .container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  
+  border-style: solid;
+  border-width: 2.5px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+
+  background-color: rgb(240, 144, 144);
+}
+
+.descripcion {
+  width: 300px;
+}
+
+ul{
+  list-style: none;
+}
+
+.pitch-image{
+
+  border-radius: 25px;
+  width: 17.5rem;
+  height: 10rem;
+}
+
+.map-image {
+
+  border-radius: 25px;
+  width: 17.5rem;
+  height: 10rem;
+
+}
+
+figcaption{
+  text-align: center;
+}
+
+label{
+  font-weight: bold;
 }

@@ -9,9 +9,13 @@
   </head>
   <body>
     <nav class="navbar">
-      <h1>TuCanchita</h1>
+      
+      <h1 id = 'nombre'>TuCanchita</h1>
+      
+      <img id = 'img-logo' src="./img/torneo.png" alt="" />
+      
       <form action="">
-        <input type="text" placeholder="Buscar..." />
+        <input id='busqueda' type="text" placeholder="Buscar..." />
         <button>
           <img src="/img/search.svg" alt="" class="search" />
         </button>
@@ -24,72 +28,82 @@
         </button>
       </form>
     </nav>
-    <section>
-      <div>
-        <img src="./img/torneo.png" alt="" />
-      </div>
-    </section>
+
     <div class="tabs">
-      <div>Canchas</div>
-      <div>Torneos</div>
-      <div>Incompletos</div>
+      <div id='tab01'>Canchas</div>
+      <div id='tab02'>Torneos</div>
+      <div id='tab03'>Incompletos</div>
     </div>
+    <figure>
+      <img id = 'img-campeonato' src="https://image.shutterstock.com/image-vector/football-championship-poster-flyer-banner-600w-663343309.jpg">
+      <figcaption>Anuncio de campeonato de futbol</figcaption>
+    </figure>
     <section class="canchitas">
+      
       <div class="container">
-        <div>
-          <div>Canchita Pepito</div>
-          <div>
-            S/50 <br />
-            x hora
-          </div>
-          <div>****</div>
+        
+        <div class='descripcion'>
+          <ul><label>Cancha Pepito</label>
+            <li>Precio por hora: S/ 50</li>
+            <li>Horario de atencion: 10 am - 01 am</li>
+            <li>Para reserva, adelantar el 50%</li>
+          </ul>
         </div>
-        <div>
-          Servicios:
-          <ul>
+        
+        <div class='servicios'>
+          <ul><label>Servicios:</label>
             <li>Cancha: 120m x 90m</li>
             <li>Pelota premium</li>
             <li>Camiseta</li>
             <li>Árbitro</li>
           </ul>
-          <button>Ver Horarios</button>
         </div>
-        <div>
-          <img src="./img/cancha.png" alt="" />
-        </div>
-        <div>
-          <div>Dirección:</div>
-          <img src="./img/map.jpg" alt="" />
-        </div>
+
+        <figure>
+          <img class="pitch-image" id = 'pitch-image01' src="./img/cancha.png" alt="" />
+          <figcaption>Imagen referencial</figcaption>
+        </figure>
+        
+        <figure class="map-image">
+          <img class = 'map-image' id = 'map-image01' src="./img/map.jpg" alt="" />
+          <figcaption>Direccion: Av. Buenavista 135 San Borja</figcaption>
+        </figure>
+        
       </div>
+      
       <div class="container">
-        <div>
-          <div>Canchita Pepito</div>
-          <div>
-            S/50 <br />
-            x hora
-          </div>
-          <div>****</div>
+        
+        <div class='descripcion'>
+          <ul><label>Cancha Pepito</label>
+            <li>Precio por hora: S/ 50</li>
+            <li>Horario de atencion: 10 am - 01 am</li>
+            <li>Para reserva, adelantar el 50%</li>
+          </ul>
         </div>
-        <div>
-          Servicios:
-          <ul>
+
+        <div class='servicios'>
+          <ul> <label>Servicios:</label>
             <li>Cancha: 120m x 90m</li>
             <li>Pelota premium</li>
             <li>Camiseta</li>
             <li>Árbitro</li>
           </ul>
-          <button>Ver Horarios</button>
+
         </div>
-        <div>
-          <img src="./img/cancha.png" alt="" />
-        </div>
-        <div>
-          <div>Dirección:</div>
-          <img src="./img/map.jpg" alt="" />
-        </div>
+        
+        <figure >
+          <img class="pitch-image" id = 'pitch-image02' src="./img/cancha.png" alt="" />
+          <figcaption>Imagen referencial</figcaption>
+        </figure>
+        
+        <figure>
+            <img class = 'map-image' id = 'map-image02' src="./img/map.jpg" alt="" />
+            <figcaption>Direccion: Av. Buenavista 135 San Borja</figcaption>
+        </figure>
+          
+        
       </div>
-      <div></div>
+    
     </section>
     <footer></footer>
   </body>
