@@ -1,28 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>TuCanchita</title>
-  </head>
-  <body>
-    <nav class="navbar">
-      <h1>TuCanchita</h1>
-      <form action="">
-        <input type="text" placeholder="Buscar..." />
-        <button>
-          <img src="/img/search.svg" alt="" class="search" />
-        </button>
-        <button>
-          <img src="./img/filter.svg" alt="" class="filter" /><!--funnel-->
-        </button>
-        <button>Cerca a ti</button>
-        <button>
-          <img src="/img/soccer.svg" alt="" class="soccer" />
-        </button>
-      </form>
-    </nav>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>TuCanchita</title>
+</head>
+
+<body>
+
+  <div class="topnav">
+    <a class="active" href="#home">TuCanchita</a>
+    <input type="text" placeholder="Buscar...">
+    <a href="#contact">Cerca a ti</a>
+  </div>
+
+  <div class="slider-holder">
+    <span id="slider-image-1"></span>
+    <span id="slider-image-2"></span>
+    <span id="slider-image-3"></span>
+    <div class="image-holder">
+      <img src="./img/torneo1.jpg" class="slider-image" />
+      <img src="./img/torneo2.jpg" class="slider-image" />
+      <img src="./img/torneo3.jpg" class="slider-image" />
+    </div>
+    <div class="button-holder">
+      <a href="#slider-image-1" class="slider-change"></a>
+      <a href="#slider-image-2" class="slider-change"></a>
+      <a href="#slider-image-3" class="slider-change"></a>
+    </div>
+  </div>
+
+  <div id="container">
+    <section class="left-column">Canchas</section>
+    <section class="right-column">Torneos</section>
+    <section class="center-column">Incompletos</section>
+  </div>
+
+  <div class="w">
+    <section class="wf">
+      <div class="wff">
+        <div class="main-container">
+          <div class="container">
+            <ul>
+              <li><span>Canchita Pepito San Roman</span></li>
+              <li><span></span></li>
+              <li><span>$50 por hora</span></li>
+              <li><span>12 jugadores</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="wff">
+        <div class="main-container">
+          <div class="container2">
+            <ul>
+              <li><span>Servicios</span></li>
+              <li><span></span></li>
+              <li><span>Cancha 120m x 90m</span></li>
+              <li><span>Pelota premium</span></li>
+              <li><span>Camisetas</span></li>
+              <li><span>Arbitraje</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="wff"><img src="./img/cancha1.jpg" class="img-cancha" /></div>
+      <div class="wff">
+        La Victoria
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233913121413!2d77.4051603706222!3d28.50292593193056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce626851f7009%3A0x621185133cfd1ad1!2sGeeksforGeeks!5e0!3m2!1sen!2sin!4v1585040658255!5m2!1sen!2sin"
+          width="90%" height="90%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0">
+        </iframe>
+      </div>
+    </section>
+  </div>
+
+  <div class="w">
+    <section class="wf">
+      <div class="wff">
+        <div class="main-container">
+          <div class="container">
+            <ul>
+              <li><span>Canchita Rosa Nautica</span></li>
+              <li><span></span></li>
+              <li><span>$50 por hora</span></li>
+              <li><span>12 jugadores</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="wff">
+        <div class="main-container">
+          <div class="container2">
+            <ul>
+              <li><span>Servicios</span></li>
+              <li><span></span></li>
+              <li><span>Cancha 120m x 90m</span></li>
+              <li><span>Pelota premium</span></li>
+              <li><span>Camisetas</span></li>
+              <li><span>Arbitraje</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="wff"><img src="./img/cancha2.jpg" class="img-cancha" /></div>
+      <div class="wff">
+        La Victoria
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233913121413!2d77.4051603706222!3d28.50292593193056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce626851f7009%3A0x621185133cfd1ad1!2sGeeksforGeeks!5e0!3m2!1sen!2sin!4v1585040658255!5m2!1sen!2sin"
+          width="90%" height="90%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0">
+        </iframe>
+      </div>
+    </section>
+  </div>
+  <footer></footer>
+</body>
+
 </html>
