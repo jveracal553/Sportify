@@ -6,6 +6,9 @@
 
 Dont forget to check your 'vs-code-javascript-settings'. Compare to .settings file in the repo.
 
+On VsCode install the following extensions: ESLint
+On VsCode install the following extensions: Prettier
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
