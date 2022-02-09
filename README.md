@@ -1,17 +1,3 @@
-# ESLINT & PRETTIER TUTORIALS
-
-[Medium web](https://medium.com/@icruzr93/cómo-configurar-eslint-y-prettier-en-vscode-para-un-proyecto-en-react-5f6324e582a9)
-
-[Youtube](https://www.youtube.com/watch?v=1tYJqTDkvUQ)
-
-Test
-
-Dont forget to check your 'vs-code-javascript-settings'. Compare to .settings file in the repo.
-
-On VsCode install the following extensions: ESLint
-
-On VsCode install the following extensions: Prettier
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
