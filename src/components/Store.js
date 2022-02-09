@@ -7,12 +7,12 @@ import {
   Spacer,
   Spinner,
   Stack,
-  Tag,
-} from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import Header from "./Header";
-import axios from "axios";
+  Tag
+} from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import Header from './Header';
+import axios from 'axios';
 
 const min = 15;
 const max = 80;
@@ -34,13 +34,13 @@ const StoreItem = ({ product }) => {
     <Box p={4} borderRadius="lg" borderWidth="1px">
       {visible ? (
         <Box>
-          <Tag mt={2} colorScheme={"green"}>
+          <Tag mt={2} colorScheme={'green'}>
             {counterDown}s
           </Tag>
           <Link
             to={{
               pathname: `/product/${product.id}`,
-              state: product,
+              state: product
             }}
           >
             <Center>
@@ -50,7 +50,7 @@ const StoreItem = ({ product }) => {
         </Box>
       ) : (
         <Box>
-          <Tag mt={2} colorScheme={"red"}>
+          <Tag mt={2} colorScheme={'red'}>
             Expired!
           </Tag>
           <Center>
@@ -84,7 +84,7 @@ function Store() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("https://fakestoreapi.com/products").then(({ data }) => {
+    axios.get('https://fakestoreapi.com/products').then(({ data }) => {
       setLoading(false);
       setStoreItem(data);
     });
@@ -92,7 +92,7 @@ function Store() {
 
   return (
     <Box>
-      <Header title="Fake Store" />
+      {/* <Header title="Fake Store" /> */}
 
       {loading ? (
         <Center mt={6}>

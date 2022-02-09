@@ -1,13 +1,13 @@
-import Store from "./components/Store";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Product from "./components/Product";
-import Navbar from "./components/Navbar";
-import About from "./components/About";
+import Store from './components/Store';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Product from './components/Product';
+import Navbar from './components/Navbar';
+import About from './components/About';
 
 function App() {
   return (
     <Router>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
       <Switch>
         <Route path="/" exact component={(props) => <Store />} />
         <Route
