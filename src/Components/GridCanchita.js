@@ -52,9 +52,13 @@ function GridCanchita() {
   const [gridItem, setGridItem] = useState([]);
 
   useEffect(() => {
-    axios.get("https://fakestoreapi.com/products").then(({ data }) => {
-      setGridItem(data);
-    });
+    axios
+      .get(
+        "https://raw.githubusercontent.com/jveracal553/Sportify/feature/SFY-67-create_navbar/canchitainfo"
+      )
+      .then(({ data }) => {
+        setGridItem(data);
+      });
   }, []);
 
   return (
