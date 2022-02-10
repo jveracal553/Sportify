@@ -8,48 +8,58 @@ import {
   Spacer,
   Stack,
   Tag,
-} from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
+} from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const GridCanchitaItem = ({ canchita }) => {
   return (
-    <Box p={4} borderRadius="lg" borderWidth="1px">
-      <Box>
-        {/* <Link
-          to={{
-            pathname: `/canchita/${canchita.id}`,
-            state: canchita,
-          }}
-        > */}
-        <Center>
-          <Image mt={4} src={canchita.image} w={24} h={24}></Image>
-        </Center>
-
-        {/* </Link> */}
-      </Box>
-      <Box></Box>
-      <Heading mt={4} noOfLines={1} size="sm" fontWeight="Normal">
-        {canchita.title}
-      </Heading>
-      <Spacer />
-      <Box>
-        <Center>
-          <Tag mt={2}>{canchita.category}</Tag>
-        </Center>
-      </Box>
-      <Stack>
+    <div className='gridCanchitas'>
+      <Box
+        p={4}
+        borderRadius='lg'
+        borderWidth='2px'
+        _hover={{
+          background: 'white',
+          color: 'teal.500',
+          'box-shadow': '0 0 5px 5px #ddd',
+        }}
+      >
         <Box>
-          <Center>
-            <Tag mt={2}>${canchita.price}</Tag>
-          </Center>
-          <Button colorScheme="teal" size="sm" ml={60}>
-            Go
-          </Button>
+          <Link
+            to={{
+              pathname: `/canchita/${canchita.id}`,
+              state: canchita,
+            }}
+          >
+            <Center>
+              <Image mt={1} src={canchita.image} w={'95%'} h={'95%'}></Image>
+            </Center>
+          </Link>
         </Box>
-      </Stack>
-    </Box>
+        <Box></Box>
+        <Heading mt={4} noOfLines={1} size='xs' fontWeight='Bold'>
+          {canchita.title}
+        </Heading>
+        <Spacer />
+        <Box>
+          <Heading mt={4} noOfLines={1} size='xs' fontWeight='Normal'>
+            {canchita.category}
+          </Heading>
+        </Box>
+        <Stack>
+          <Box>
+            <Heading mt={4} noOfLines={1} size='xs' fontWeight='Normal'>
+              Desde S/{canchita.price}
+            </Heading>
+            <Button colorScheme='teal' size='xs' ml={'55%'}>
+              Ver horarios
+            </Button>
+          </Box>
+        </Stack>
+      </Box>
+    </div>
   );
 };
 
@@ -59,7 +69,7 @@ function GridCanchita() {
   useEffect(() => {
     axios
       .get(
-        "https://raw.githubusercontent.com/jveracal553/Sportify/feature/SFY-67-create_navbar/canchitainfo"
+        'https://raw.githubusercontent.com/jveracal553/Sportify/feature/SFY-67-create_navbar/canchitainfo'
       )
       .then(({ data }) => {
         setGridItem(data);
