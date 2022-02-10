@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Center,
   Heading,
   Image,
@@ -16,16 +17,17 @@ const GridCanchitaItem = ({ canchita }) => {
   return (
     <Box p={4} borderRadius="lg" borderWidth="1px">
       <Box>
-        <Link
+        {/* <Link
           to={{
             pathname: `/canchita/${canchita.id}`,
             state: canchita,
           }}
-        >
-          <Center>
-            <Image mt={4} src={canchita.image} w={24} h={24}></Image>
-          </Center>
-        </Link>
+        > */}
+        <Center>
+          <Image mt={4} src={canchita.image} w={24} h={24}></Image>
+        </Center>
+
+        {/* </Link> */}
       </Box>
       <Box></Box>
       <Heading mt={4} noOfLines={1} size="sm" fontWeight="Normal">
@@ -42,6 +44,9 @@ const GridCanchitaItem = ({ canchita }) => {
           <Center>
             <Tag mt={2}>${canchita.price}</Tag>
           </Center>
+          <Button colorScheme="teal" size="sm" ml={60}>
+            Go
+          </Button>
         </Box>
       </Stack>
     </Box>
@@ -62,9 +67,9 @@ function GridCanchita() {
   }, []);
 
   return (
-    <Box>
-      <Box p={2}>
-        <SimpleGrid columns={{ base: 1, md: 5 }} spacing={4} mt={4}>
+    <Box p={20}>
+      <Box p={4}>
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} mt={0}>
           {gridItem.map((item) => {
             return <GridCanchitaItem key={item.id} canchita={item} />;
           })}
