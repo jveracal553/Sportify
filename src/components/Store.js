@@ -11,7 +11,6 @@ import {
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Header from './Header';
 import axios from 'axios';
 
 const min = 15;
@@ -34,9 +33,6 @@ const StoreItem = ({ product }) => {
     <Box p={4} borderRadius="lg" borderWidth="1px">
       {visible ? (
         <Box>
-          <Tag mt={2} colorScheme={'green'}>
-            {counterDown}s
-          </Tag>
           <Link
             to={{
               pathname: `/product/${product.id}`,
@@ -92,8 +88,6 @@ function Store() {
 
   return (
     <Box>
-      {/* <Header title="Fake Store" /> */}
-
       {loading ? (
         <Center mt={6}>
           <Spinner
