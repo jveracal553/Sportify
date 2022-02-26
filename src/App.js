@@ -1,8 +1,8 @@
 import "./App.css";
-import NavBar from "./Components/NavBar/NavBar";
-import GridCanchita from "./Components/GridCanchita";
+import NavBar from "./components/NavBar/NavBar";
+import GridCanchita from "./components/GridCanchita";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Canchita from "./Components/Canchita";
+import Canchita from "./components/Canchita";
 
 function App() {
   // return (
