@@ -1,8 +1,9 @@
-import "./App.css";
-import NavBar from "./components/NavBar/NavBar";
-import GridCanchita from "./components/GridCanchita";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Canchita from "./components/Canchita";
+import './App.css';
+import NavBar from './components/NavBar/NavBar';
+import GridCanchita from './components/GridCanchita';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Canchita from './components/Canchita';
+import Register from './components/Register';
 
 function App() {
   // return (
@@ -15,12 +16,13 @@ function App() {
     <Router>
       <NavBar />
       <Switch>
-        <Route path="/" exact component={(props) => <GridCanchita />} />
+        <Route path='/' exact component={(props) => <GridCanchita />} />
         <Route
-          path="/canchita/:id"
+          path='/canchita/:id'
           component={(props) => <Canchita {...props} />}
         />
 
+        <Route path='/register' component={() => <Register />} />
         <Route>404 Page </Route>
       </Switch>
     </Router>
