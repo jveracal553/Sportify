@@ -3,7 +3,9 @@ import NavBar from './components/NavBar/NavBar';
 import GridCanchita from './components/GridCanchita';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Canchita from './components/Canchita';
+import Login from './components/Login';
 import Register from './components/Register';
+
 
 function App() {
   // return (
@@ -21,6 +23,7 @@ function App() {
           path='/canchita/:id'
           component={(props) => <Canchita {...props} />}
         />
+        <Route path='/login' component={(props) => <Login />} />
 
         <Route path='/register' component={() => <Register />} />
         <Route>404 Page </Route>
