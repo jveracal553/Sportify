@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import soccer from '../../images/soccer.jpg';
-import './Register.css';
+import './RegisterOwner.css';
 import {Link, useHistory} from 'react-router-dom'
 
 export default function RegisterOwner() {
