@@ -1,34 +1,18 @@
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
-import GridCanchita from './components/GridCanchita';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Canchita from './components/Canchita';
-import Login from './components/Login';
-import Register from './components/Register';
+import AppRoutes from './routes/AppRoutes';
+import {UserContext } from './context/userContext'
+import React, { useContext, useEffect } from 'react';
 
 
 function App() {
-  // return (
-  //   <div className='App'>
-  //     <NavBar />
-  //   </div>
-  // );
-
+  const { Initialize } = useContext(UserContext);
+  useEffect(() => {
+    Initialize();
+  }, []);
   return (
-    <Router>
-      <NavBar />
-      <Switch>
-        <Route path='/' exact component={(props) => <GridCanchita />} />
-        <Route
-          path='/canchita/:id'
-          component={(props) => <Canchita {...props} />}
-        />
-        <Route path='/login' component={(props) => <Login />} />
-
-        <Route path='/register' component={() => <Register />} />
-        <Route>404 Page </Route>
-      </Switch>
-    </Router>
+    <div className='App'>
+      <AppRoutes />
+    </div>
   );
 }
 

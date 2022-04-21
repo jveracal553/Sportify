@@ -9,10 +9,17 @@ import {
   Tag,
   Text,
 } from "@chakra-ui/react";
+import React, { useState } from 'react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+import GroupHour from "../GroupHour";
 
 function Canchita({ location }) {
   const { state } = location;
+  const [value, onChange] = useState(new Date());
 
+  const isDisabled = ({activeStartDate, date, view }) => {
+    return date.getDay() === 4 }
   if (!state) {
     window.location = "/";
   }
@@ -38,6 +45,13 @@ function Canchita({ location }) {
           </SimpleGrid>
         </Box>
       </Box>
+      <Box w="700px" display="flex" alignItems="center" justifyContent="space-around">
+          <Calendar minDate={new Date()} tileDisabled={isDisabled} onChange={onChange} value={value} />
+          <Box>
+          <GroupHour hours={['8:00','9:00','10:00']}/>
+          </Box>
+      </Box>
+        
     </Box>
   );
 }
