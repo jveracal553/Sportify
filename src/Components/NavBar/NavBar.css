@@ -63,3 +63,7 @@ img {
   border-radius: 15px;
   border: none;
 }
+
+.topnav__singin, .topnav__reservas, .topnav__singoff{
+  margin: 15px;
+}

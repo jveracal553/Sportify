@@ -48,7 +48,7 @@ export default function NavBar() {
         {location.pathname == "/" && <SearchBar />}
 
         {user.name !== "" ? (
-          <>
+          <div className="group">
             <button
               type="button"
               className="topnav__singin"
@@ -68,7 +68,7 @@ export default function NavBar() {
             <button type="button" className="topnav__singoff" onClick={logoff}>
               Cerrar Sesion
             </button>
-          </>
+          </div>
         ) : (
           <button type="button" className="topnav__singin" onClick={login}>
             Iniciar sesión
