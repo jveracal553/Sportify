@@ -24,7 +24,7 @@ export default function LoginOwner() {
       alert(response.message)
     }else{
       ChangeTokenState(response.token, response.name, response.type);
-      history.push('/')
+      history.push('/gridowner')
     }
   }
   return (
