@@ -10,25 +10,31 @@ import SearchBar from "./Search";
 
 export default function NavBar() {
   const { user, ClearTokenState } = useContext(UserContext);
-  const location = useLocation()
+  const location = useLocation();
   const history = useHistory();
   const login = () => {
     history.push("/login");
   };
+
+  const gridowner = () => {
+    console.log("estamos aqui");
+    history.push("/gridowner");
+  };
+
   const logoff = () => {
     // localStorage.clear();
     ClearTokenState();
     //window.location.reload(false);
     history.push("/login");
   };
-  const reservas = () =>{
-    if(localStorage.getItem('type')==="user"){
-      history.push('/reservauser')
+  const reservas = () => {
+    if (localStorage.getItem("type") === "user") {
+      history.push("/reservauser");
     }
-    if(localStorage.getItem('type')==="owner"){
-      history.push('/reservaowner')
+    if (localStorage.getItem("type") === "owner") {
+      history.push("/reservaowner");
     }
-  }
+  };
 
   return (
     <div className="navbar">
@@ -43,10 +49,20 @@ export default function NavBar() {
 
         {user.name !== "" ? (
           <>
-            <button type="button" className="topnav__singin">
-              {user.name}
+            <button
+              type="button"
+              className="topnav__singin"
+              // onClick={gridowner}
+            >
+              <Link to={"/gridowner"}>{user.name}</Link>
+
+              {/* {user.name} */}
             </button>
-            <button type="button" className="topnav__reservas" onClick={reservas}>
+            <button
+              type="button"
+              className="topnav__reservas"
+              onClick={reservas}
+            >
               Ver Reservas
             </button>
             <button type="button" className="topnav__singoff" onClick={logoff}>
