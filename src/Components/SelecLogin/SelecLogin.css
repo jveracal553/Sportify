@@ -1,0 +1,29 @@
+.register {
+  display: flex;
+  flex-direction: row;
+}
+
+.register-text,
+.register-image {
+  width: 50%;
+}
+
+.soccer {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.register-text {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.small {
+  font-size: 0.7rem;
+}
+
+.color {
+  color: #42a692;
+}

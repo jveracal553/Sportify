@@ -9,10 +9,19 @@ import {
   Tag,
   Text,
 } from "@chakra-ui/react";
+import React, { useState } from 'react';
+import {useParams} from 'react-router-dom'
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+import Hour from '../Hour'
 
 function Canchita({ location }) {
+  const id = useParams()
   const { state } = location;
+  const [value, onChange] = useState(new Date());
 
+  const isDisabled = ({activeStartDate, date, view }) => {
+    return date.getDay() === 4 }
   if (!state) {
     window.location = "/";
   }
@@ -38,6 +47,18 @@ function Canchita({ location }) {
           </SimpleGrid>
         </Box>
       </Box>
+      <Box w="700px" display="flex" alignItems="center" justifyContent="space-around">
+          <Calendar minDate={new Date()} tileDisabled={isDisabled} onChange={onChange} value={value} />
+          <Box>
+            <Hour 
+            day={value.toLocaleDateString().split('/')[0]}
+            month={value.toLocaleDateString().split('/')[1]}
+            year={value.toLocaleDateString().split('/')[2]}
+            soccerFieldId={id}
+            />
+          </Box>
+      </Box>
+        
     </Box>
   );
 }

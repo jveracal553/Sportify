@@ -1,0 +1,89 @@
+.register {
+  display: flex;
+  flex-direction: row;
+}
+
+.register-text,
+.register-image {
+  width: 50%;
+}
+
+.soccer {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.register-text {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.register-text__logo {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.register-text__info-title {
+  margin: 20px 0 10px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.register-text__logo > .fas {
+  color: #000;
+  margin-right: 10px;
+}
+
+.register-text__info-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-text__info-form-names {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.register-text__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  background-color: #e7e7e7;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+.register-text__button {
+  width: 100%;
+  background-color: #42a692;
+  height: 30px;
+  border-radius: 15px;
+  color: #fff;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.register-text__register {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.small {
+  font-size: 0.7rem;
+}
+
+.color {
+  color: #42a692;
+}
