@@ -7,6 +7,7 @@ import {
   SimpleGrid,
   Spacer,
   Stack,
+  AspectRatio,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -26,9 +27,11 @@ const GridCanchitaItem = ({ canchita }) => {
         }}
       >
         <Box>
-          <Center>
-            <Image mt={1} src={canchita.image} w={"95%"} h={"95%"}></Image>
-          </Center>
+          <AspectRatio maxW="500px" ratio={19 / 10}>
+            <Center>
+              <Image mt={1} src={canchita.image} h={"100%"} w={"90%"}></Image>
+            </Center>
+          </AspectRatio>
         </Box>
         <Box></Box>
         <Heading mt={4} noOfLines={1} size="xs" fontWeight="Bold">
