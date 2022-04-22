@@ -139,14 +139,12 @@ const GridCanchitaItem = ({ canchita }) => {
   );
 };
 
-function GridCanchita() {
+function GridCanchita({url = 'https://raw.githubusercontent.com/jveracal553/Sportify/feature/SFY-67-create_navbar/canchitainfo'}) {
   const [gridItem, setGridItem] = useState([]);
 
   useEffect(() => {
     axios
-      .get(
-        'https://raw.githubusercontent.com/jveracal553/Sportify/feature/SFY-67-create_navbar/canchitainfo'
-      )
+      .get(url)
       .then(({ data }) => {
         setGridItem(data);
       });

@@ -70,12 +70,14 @@ export default function RegisterOwner() {
               name='localName'
               type='text'
               placeholder='Nombre del local'
+              onChange={ handleChange}
             ></input>
             <input
               className='register-text__info-form-email input'
               name='ubication'
               type='text'
               placeholder='Dirección del local'
+              onChange={ handleChange}
             ></input>
             <button className='register-text__button' type='submit'>Ingresar</button>
           </form>

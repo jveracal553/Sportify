@@ -21,7 +21,7 @@ export default function LoginOwner() {
     });
     response = await response.json()
     ChangeTokenState(response.token, response.name, response.type);
-    history.push('/')
+    history.push('/gridowner')
   }
   return (
     <div className='login'>
