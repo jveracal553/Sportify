@@ -8,22 +8,23 @@ import {
   Stack,
   Tag,
   Text,
-  Button
+  Button,
 } from "@chakra-ui/react";
-import React, { useState } from 'react';
-import {useParams} from 'react-router-dom'
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
-import Hour from '../Hour'
-import './style.css'
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import Hour from "../Hour";
+import "./style.css";
 
 function Canchita({ location }) {
-  const id = useParams()
+  const id = useParams();
   const { state } = location;
   const [value, onChange] = useState(new Date());
 
-  const isDisabled = ({activeStartDate, date, view }) => {
-    return date.getDay() === 1 }
+  const isDisabled = ({ activeStartDate, date, view }) => {
+    return date.getDay() === 1;
+  };
   if (!state) {
     window.location = "/";
   }
@@ -42,26 +43,37 @@ function Canchita({ location }) {
                 <Stack spacing={4}>
                   <Box>
                     <Heading>Price: ${state.price}</Heading>
-                    <Tag mt={2}>{state.category}</Tag>
+                    <Tag mt={2}>{state.name}</Tag>
                   </Box>
-                  <Text>{state.description}</Text>
+                  <Text>{state.direction}</Text>
                 </Stack>
               </GridItem>
             </SimpleGrid>
           </Box>
         </Box>
-        <Box w="80vw" display="flex" flexDirection={"row"} alignItems={"center"} justifyContent={"center"} margin={"auto"}>
-            <Calendar minDate={new Date()} tileDisabled={isDisabled} onChange={onChange} value={value} />
-            <Box>
-              <Hour 
-              day={value.toLocaleDateString().split('/')[0]}
-              month={value.toLocaleDateString().split('/')[1]}
-              year={value.toLocaleDateString().split('/')[2]}
+        <Box
+          w="80vw"
+          display="flex"
+          flexDirection={"row"}
+          alignItems={"center"}
+          justifyContent={"center"}
+          margin={"auto"}
+        >
+          <Calendar
+            minDate={new Date()}
+            tileDisabled={isDisabled}
+            onChange={onChange}
+            value={value}
+          />
+          <Box>
+            <Hour
+              day={value.toLocaleDateString().split("/")[0]}
+              month={value.toLocaleDateString().split("/")[1]}
+              year={value.toLocaleDateString().split("/")[2]}
               soccerFieldId={id}
-              />
-            </Box>
+            />
+          </Box>
         </Box>
-          
       </Box>
     </>
   );
