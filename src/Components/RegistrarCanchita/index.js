@@ -37,10 +37,13 @@ export default function RegistrarCanchita() {
           </Link>
         </div>
         <div className="login-text__info">
-          <p className="login-text__info-title">
-            Bienvenido a <br /> Sportify
+          <p className="login-text__info-title" >
+            Ingrese información de su local
           </p>
-          <form className="login-text__info-form">
+          <form className="login-text__info-form"
+           style={{
+             "height": "50vh"
+             }}>
              <input
               name="name"
               className="login-text__info-form-email"
@@ -52,14 +55,14 @@ export default function RegistrarCanchita() {
               name="start"
               className="login-text__info-form-email"
               type='number'
-              placeholder="Hora de apertura"
+              placeholder="Hora de apertura (24h)"
               onChange={handleChange}
             ></input>
             <input
               name="end"
               className="login-text__info-form-email"
               type='number'
-              placeholder="Hora de cierre"
+              placeholder="Hora de cierre (24h)"
               onChange={handleChange}
             ></input>
             <input
@@ -88,9 +91,6 @@ export default function RegistrarCanchita() {
           Agregar Cancha
         </button>
         </div>
-      </div>
-      <div className="login-image">
-        <img className="soccer" src={soccer} alt="" />
       </div>
     </div>
   );

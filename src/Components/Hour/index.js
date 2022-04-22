@@ -57,7 +57,7 @@ export default function Hour ({day, month, year, soccerFieldId}) {
             if(x.state === 'availableNoSelected'){ 
                 setSelection([...selection, x.hour])
                 setHour(hour.map(item=>{
-                    if(item.hour==x.hour){
+                    if(item.hour===x.hour){
                         return {hour: x.hour, state: 'availableSelected'}
                     }else{
                         return item
@@ -66,7 +66,7 @@ export default function Hour ({day, month, year, soccerFieldId}) {
             } else {
                 setSelection(selection.filter(x=>x.hour))
                 setHour(hour.map(item=>{
-                    if(item.hour==x.hour){
+                    if(item.hour===x.hour){
                         return {hour: x.hour, state: 'availableNoSelected'}
                     }else{
                         return item
