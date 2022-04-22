@@ -7,6 +7,7 @@ import filter from "../../images/filter-solid.svg";
 import map from "../../images/location-dot-solid.svg";
 import { UserContext } from "../../context/userContext";
 import SearchBar from "./Search";
+// import CarouselImg from "./carousel";
 
 export default function NavBar() {
   const { user, ClearTokenState } = useContext(UserContext);

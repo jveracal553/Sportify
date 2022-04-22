@@ -13,13 +13,11 @@ import GridOwner from "../Components/GridOwner";
 import ReservaUser from "../Components/ReservaUser";
 import ReservaOwner from "../Components/ReservaOwner";
 
-import CarouselImg from "../Components/carousel";
-
 function AppRoutes() {
   return (
     <Router>
       <NavBar />
-      <CarouselImg />
+
       <Switch>
         <Route path="/" exact component={(props) => <GridCanchita />} />
         <Route

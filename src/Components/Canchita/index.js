@@ -42,7 +42,7 @@ function Canchita({ location }) {
               <GridItem colSpan={3}>
                 <Stack spacing={4}>
                   <Box>
-                    <Heading>Price: ${state.price}</Heading>
+                    <Heading>Precio: S/{state.price}</Heading>
                     <Tag mt={2}>{state.name}</Tag>
                   </Box>
                   <Text>{state.direction}</Text>
